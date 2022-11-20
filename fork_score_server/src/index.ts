@@ -27,6 +27,7 @@ app.get('/',(_,res) => {
 });
 
 app.use("/", loginRouter)
+app.use("/location", locationRouter)
 
 app.listen(3000, () => {
     console.log(`server started at port ${3000}`);
