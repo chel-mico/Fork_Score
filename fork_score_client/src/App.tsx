@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import Button from './button.tsx';
+import Pic from './images/salad.svg';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="content">
+      <div className="App">
+        <h1 className="title">Fork Score</h1>
+        <img className="salad" src={Pic} alt={"Salad"}/>
+      </div>
+      <div className="App">
+        <h1 className="title">Hey there!</h1>
+        <p>Welcome to Fork Score, where we help you see what restaurants meet your needs.</p>
+        <Button />
+      </div>
     </div>
   );
 }
-
-export default App;
