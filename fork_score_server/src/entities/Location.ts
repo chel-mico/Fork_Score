@@ -21,8 +21,11 @@ export class Location {
     @Column()
     name: string
 
-    @Column({type: "float"})
+    @Column({type: "int"})
     distance: number
+
+    @Column({type: "int"})
+    score: number
 
     @ManyToOne(() => Restaurant, (restaurant) => restaurant.locations)
     restaurant: Restaurant
