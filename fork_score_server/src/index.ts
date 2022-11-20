@@ -3,10 +3,9 @@ const express = require('express')
 const path = require("path");
 const bodyParser = require('body-parser');
 import {loginRouter} from './resolvers/login'
-
 import { db } from "./data-source"
-
 import * as dotenv from 'dotenv'
+import { locationRouter } from './resolvers/location';
 dotenv.config();
 
 db.initialize()
@@ -27,6 +26,7 @@ app.get('/',(_,res) => {
 });
 
 app.use("/", loginRouter)
+app.use("/", locationRouter)
 
 app.listen(3000, () => {
     console.log(`server started at port ${3000}`);

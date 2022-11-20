@@ -10,7 +10,7 @@ const locationRouter:Express = express.Router()
 
 locationRouter.use(bodyParser.urlencoded({ extended: false }))
 
-locationRouter.post('/location', async (req, res) =>{
+locationRouter.get('/location', async (req, res) =>{
     try{
         const repo = db.getRepository(Location)
         let locations = await repo.createQueryBuilder()
